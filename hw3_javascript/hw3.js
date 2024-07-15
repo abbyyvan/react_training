@@ -8,6 +8,9 @@
 //2.Implement your versions of the following Array methods (choose 6).
 //map, filter, reduce, every, find, includes, join, pop, push, reverse, slice, sort
 Array.prototype.myMap = function (callbackFn) {
+    if (typeof callbackFn !== 'function'){
+        thorw `${callbackFn} is not a function`
+    }
     let tempArr = []
     for ( let i  = 0; i < this.length; i++) {
         tempArr.push(callbackFn(this[i], i, this))
@@ -17,6 +20,9 @@ Array.prototype.myMap = function (callbackFn) {
 
 
 Array.prototype.myFilter = function(callbackFn) {
+    if (typeof callbackFn !== 'function'){
+        thorw `${callbackFn} is not a function`
+    }
     let tempArr = []
     for ( let i  = 0; i < this.length; i++) {
         if(callbackFn(this[i], i, this)){
@@ -27,6 +33,9 @@ Array.prototype.myFilter = function(callbackFn) {
 }
 
 Array.prototype.myReduce = function(callbackFn, initialValue){
+    if (typeof callbackFn !== 'function'){
+        thorw `${callbackFn} is not a function`
+    }
     let tempArr = []
     if (initialValue === undefined && this.length === 0){
         try {
@@ -48,6 +57,9 @@ Array.prototype.myReduce = function(callbackFn, initialValue){
 }
 
 Array.prototype.myEvery = function(callbackFn){
+    if (typeof callbackFn !== 'function'){
+        thorw `${callbackFn} is not a function`
+    }
     for(let i = 0; i < this.length; i++) {
         if(!callbackFn(this[i],i)) {
             return false
@@ -57,6 +69,9 @@ Array.prototype.myEvery = function(callbackFn){
 }
 
 Array.prototype.myFound = function(callbackFn){
+    if (typeof callbackFn !== 'function'){
+        thorw `${callbackFn} is not a function`
+    }
     for(let i = 0; i < this.length; i++) {
         if(callbackFn(this[i],i)) {
             let result = this[i]
@@ -84,6 +99,8 @@ Array.prototype.myIncludes = function(searchElement, fromIdex){
     }
     return false
 }
+
+
 
 
 
