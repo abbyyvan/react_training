@@ -19,6 +19,7 @@ console.log(count()) //6
 //3.Give an example of a common mistake related to hoisting and explain how to fix it.
 // hoist means variable and function declarations are move to the top of the scrope
 //we fix it by moving declaration to the top of the scrope
+//fix: common mistake is to use a variable before it is decleared. to fix it, use let or const instead
 let x = 1
 console.log(x) //referernce error: cannot access 'x' before initializaiton
 // let x = 1
